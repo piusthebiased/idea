@@ -17,10 +17,18 @@ public class RequestBuilder {
         headers = new HeaderMap();
     }
 
-    public HttpRequest.Builder build() throws URISyntaxException {
+    public HttpRequest build() throws URISyntaxException {
         args.appendArgs(builder);
         headers.appendHeaders(builder);
 
-        return builder;
+        return builder.build();
+    }
+
+    public void addHeader(String key, String value) {
+        headers.put(key, value);
+    }
+
+    public void addParams(String key, String value) {
+        args.put(key, value);
     }
 }

@@ -1,5 +1,6 @@
 package org.decagonlabs.discord;
 
+import org.decagonlabs.discord.api.http.RequestBuilder;
 import org.tinylog.Logger;
 
 // currently uses bot auth flow
@@ -12,6 +13,13 @@ public class Authorization {
         this.type = type;
     }
 
+    // get token as auth header
+    public RequestBuilder appendAuthorizationHeader(RequestBuilder builder) {
+        builder.addHeader("Authorization", getTokenString());
+
+        return builder;
+    }
+
     // getters and setters
     public String getToken() {
         return token;
@@ -19,6 +27,10 @@ public class Authorization {
 
     public TokenType getType() {
         return type;
+    }
+
+    public String getTokenString() {
+        return getType().getType() + " " + getToken();
     }
 
     // enumeration for TokenType
