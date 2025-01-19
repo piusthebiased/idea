@@ -1,7 +1,6 @@
 package org.decagonlabs.discord;
 
-import org.decagonlabs.discord.api.http.RequestBuilder;
-import org.tinylog.Logger;
+import org.decagonlabs.discord.api.http.utils.RequestBuilder;
 
 // currently uses bot auth flow
 public class Authorization {

@@ -1,4 +1,4 @@
-package org.decagonlabs.discord.api.http;
+package org.decagonlabs.discord.api.http.utils;
 
 import java.net.http.HttpRequest;
 import java.util.*;

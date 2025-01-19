@@ -1,10 +1,8 @@
-package org.decagonlabs.discord.api.http;
-
-import org.tinylog.Logger;
+package org.decagonlabs.discord.api.http.utils;
 
 import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
-import org.decagonlabs.discord.api.http.RequestArgs.RequestMethod;
+import org.decagonlabs.discord.api.http.utils.RequestArgs.RequestMethod;
 
 public class RequestBuilder {
     private HttpRequest.Builder builder;

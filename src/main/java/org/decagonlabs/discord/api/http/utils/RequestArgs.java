@@ -1,6 +1,4 @@
-package org.decagonlabs.discord.api.http;
-
-import org.tinylog.Logger;
+package org.decagonlabs.discord.api.http.utils;
 
 import java.net.URI;
 import java.net.URISyntaxException;
